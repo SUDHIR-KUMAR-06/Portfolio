@@ -6,6 +6,25 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mediaquery.css" />
+    <style>
+      /* Add this new style for dark theme */
+      .dark-theme {
+        background-color: #1a1a1a;
+        color: white !important;
+      }
+      .dark-theme .section {
+        background-color: #5a6f4a;
+      }
+      .theme-toggle {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+      }
+    </style>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -18,6 +37,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Sudhir Kumar</div>
@@ -32,6 +52,7 @@
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         </div>
       </div>
     </nav>
@@ -106,28 +127,21 @@
           </div>
           <div class="text-container">
             <p>
-              As a Master&#39s student in Computer Science and Engineering, I am
-              passionate about leveraging my advanced technical knowledge and
-              web development skills to drive innovation and solve complex
-              problems. <br>
-              My academic journey has provided me with a solid
-              foundation in computer science principles, algorithms, and data
-              structures, while my hands-on experience with web technologies has
-              honed my ability to create robust, user-centric web applications.
-              Throughout my studies, I have developed a keen interest in web
-              development, gaining proficiency in a range of technologies
-              including HTML, CSS, JavaScript, and various frameworks such as
-              React and Angular. I have also worked on projects involving
-              backend technologies like Node.js and databases like MYSQL, Oracle
-              , allowing me to build full-stack solutions that are both
-              functional and scalable. <br>
-              My approach combines theoretical
-              knowledge with practical application, ensuring that I can not only
-              understand complex concepts but also apply them effectively in
-              real-world scenarios. Whether it&#39s optimizing code for
-              performance, ensuring seamless user experiences, or staying
-              updated with the latest industry trends, I am committed to
-              continuous learning and improvement.
+              As a full-stack developer skilled in React.js, Node.js,
+              Express.js, and PostgreSQL, I combine technical expertise with a
+              passion for secure, scalable solutions. <br />During my internship
+              at NIT Durgapur, I enhanced the institution&apos;s website backend
+              using Django, designing robust authentication systems and
+              optimizing PostgreSQL databases to ensure seamless performance for
+              high-traffic use. <br />Currently pursuing a Master&apos;s in
+              Computer Science, I leverage advanced algorithms and software
+              design principles to build full-stack applications, from
+              React-powered frontends to Node.js/Express backends integrated
+              with relational databases. My work emphasizes security, clean
+              architecture, and performance optimization, demonstrated in
+              projects like RESTful API development and cross-platform apps with
+              React Native. I thrive on merging academic rigor with industry
+              insights to craft efficient, user-centric solutions.
             </p>
           </div>
         </div>
@@ -300,7 +314,7 @@
               </button>
               <button
                 class="btn btn-color-2"
-                onclick="location.href='https://github.com/SUDHIR-KUMAR-06/Travel-path-planner.git'"
+                onclick="location.href='https://sudhir-kumar-06.github.io/Travel_Path_planner/'"
               >
                 Live Demo
               </button>
@@ -318,13 +332,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2"
-                onclick="location.href='https://gtihub.com'"
+                onclick="location.href='https://github.com/SUDHIR-KUMAR-06/drum-kit'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2"
-                onclick="location.href='https://gtihub.com'"
+                onclick="location.href='https://sudhir-kumar-06.github.io/drum-kit/'"
               >
                 Live Demo
               </button>
@@ -380,6 +394,17 @@
       </nav>
       <p>Copyright &#169; 2025 Sudhir Singh. All rights Reserved</p>
     </footer>
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark-theme");
+        const themeToggles = document.querySelectorAll(".theme-toggle");
+        themeToggles.forEach((btn) => {
+          btn.textContent = document.body.classList.contains("dark-theme")
+            ? "☀️"
+            : "🌓";
+        });
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

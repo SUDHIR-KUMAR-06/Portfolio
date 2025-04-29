@@ -421,3 +421,24 @@ footer {
 footer p {
   text-align: center;
 }
+.dark-theme {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.dark-theme nav {
+  background-color: #2d2d2d;
+}
+
+.dark-theme .color-container {
+  background-color: #2d2d2d;
+}
+
+.dark-theme .btn {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.dark-theme .contact-info-container {
+  background-color: #2d2d2d;
+}
